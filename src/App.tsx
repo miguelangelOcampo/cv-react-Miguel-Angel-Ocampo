@@ -1,4 +1,5 @@
 import Cabecera from './Cabecera'
+import Experiencia from './experiencia'
 import Perfil from './Perfil'
 function App() {
   
@@ -7,6 +8,7 @@ function App() {
     <>
       <Cabecera />
       <Perfil />
+      <Experiencia />
     </>
   )
 }
