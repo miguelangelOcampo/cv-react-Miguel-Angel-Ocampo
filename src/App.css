@@ -1,4 +1,4 @@
-/* Css del componente App.tsx se debe hacer uso de import './App.css'; en el archivo App.tsx en tal caso que se quiera utilizar*/
+/* Css del componente App.tsx se debe hacer uso de import './App.css'; en el archivo App.tsx en tal caso que se quiera utilizar
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,4 +40,67 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+/* Modificar posicion de los elementos en la pantalla */
+
+/* Contenedor principal que agrupa todo el CV */
+/* Contenedor principal del CV */
+.cv-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centra el conjunto */
+  align-items: flex-start; /* alinea los elementos al inicio superior */
+  gap: 60px; /* separación entre columnas */
+  padding: 40px;
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+/* Columna izquierda (foto, cabecera, perfil) */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra internamente los elementos */
+  justify-content: flex-start; /* alinea los elementos arriba */
+  gap: 25px;
+  flex: 1;
+  max-width: 350px;
+}
+
+/* Columna derecha (experiencia y estudios) */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* alinea arriba */
+  gap: 25px;
+  flex: 2;
+  max-width: 700px;
+}
+
+/* Aplica estilo uniforme a los componentes de ambas secciones */
+.left-section > *,
+.right-section > * {
+  width: 100%; /* que todos los elementos ocupen el mismo ancho dentro de su sección */
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Centrar visualmente la foto dentro de su contenedor */
+.left-section img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Alineación vertical general */
+.cv-container > * {
+  align-self: flex-start;
+}
+/* escalado de elementos  */
+.cv-container {
+  transform: scale(1.20); /* aumenta el tamaño un 15% */
+  transform-origin: top center; /* mantiene el contenido centrado al hacer zoom */
 }
