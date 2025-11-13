@@ -1,8 +1,10 @@
+import Estudios from "./Estudios"
+
 export const CabeceraData = {
     Nombre: "MIGUEL ANGEL OCAMPO MUÑOZ",
-    Celular :"+57 322 506 6946",
+    Celular: "+57 322 506 6946",
     Email: "miguelangelocampo713@gmail.com",
-    Ubicacion : "Medellín - Antioquia"
+    Ubicacion: "Medellín - Antioquia"
 }
 
 export const PerfilData = {
@@ -44,4 +46,38 @@ export const ExperienciaData = {
             "Apoyo en la preparación de alimentos y atención al cliente, fortaleciendo habilidades de trabajo en equipo y comunicación."
         ]
     }
+}
+export const EstudiosData = {
+    Titulos: {
+        Carrera: ["INGENIERÍA BIOMÉDICA",
+            "BACHILLER TÉCNICO EN DESARROLLO Y PROGRAMACIÓN DE SOFTWARE"
+        ],
+        Institucion: ["INSTITUTO TECNOLÓGICO METROPOLITANO (ITM)",
+            "INSTITUCIÓN EDUCATIVA LUIS LÓPEZ DE MESA"
+        ],
+        Descripcion: [
+            "Asocia conocimientos ingenieriles al ámbito biomédico como el desarrollo, mantenimiento y gestión de los equipos o dispositivos biomédicos.",
+            "Habilidades en programación orientada a objetos y en el uso de etiquetas y hojas de estilos en cascada (HTML y CSS)."
+        ]
+    },
+    Cursos:{
+        Titulo:["Excel Intermedio – Teachlr",
+        "Curso Profesional de HTML y CSS – Azul School"
+    ],
+        Fecha:["Dic. 2023",
+        "Nov. 2023"
+    ]
+    } ,
+    Idiomas: {
+        ingles: ["Inglés – Lectura: Bueno | Redacción: Intermedio | Comunicación verbal: Intermedio."]
+    },
+    Permisos: {
+        Licencia: ["LICENCIA DE CONDUCCION"],
+        Tipo: ["B1 – Automóviles particulares",
+            "A2 – Motocicletas de cualquier cilindraje",
+            "C1 – Automóviles de servicio público"
+        ]
+    }
+
+    
 }

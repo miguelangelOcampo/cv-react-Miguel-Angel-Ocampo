@@ -1,4 +1,6 @@
+import{ EstudiosData } from "./data";
 export default function Estudios() {
+  const {Titulos, Cursos, Idiomas, Permisos} = EstudiosData;
     return (
         <div className="mt-10 flex flex-col items-center gap-10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 shadow-lg shadow-black/40 max-w-3xl mx-auto border border-gray-700">
 
@@ -11,15 +13,14 @@ export default function Estudios() {
     {/* Ingeniería Biomédica */}
     <div className="flex flex-col gap-2">
       <h2 className="text-xl md:text-2xl font-semibold text-gray-100">
-        TITULACIÓN EN INGENIERÍA BIOMÉDICA
+        {Titulos.Carrera[0]}
       </h2>
       <p className="text-gray-300 text-lg">
-        INSTITUTO TECNOLÓGICO METROPOLITANO (ITM)
+        {Titulos.Institucion[0]}
       </p>
       <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
         <li>
-          Asocia conocimientos ingenieriles al ámbito biomédico como el desarrollo,
-          mantenimiento y gestión de los equipos o dispositivos biomédicos.
+          {Titulos.Descripcion[0]}
         </li>
       </ul>
     </div>
@@ -29,15 +30,14 @@ export default function Estudios() {
     {/* Bachiller Técnico */}
     <div className="flex flex-col gap-2">
       <h2 className="text-xl md:text-2xl font-semibold text-gray-100">
-        BACHILLER TÉCNICO EN DESARROLLO Y PROGRAMACIÓN DE SOFTWARE
+        {Titulos.Carrera[1]}
       </h2>
       <p className="text-gray-300 text-lg">
-        INSTITUCIÓN EDUCATIVA LUIS LÓPEZ DE MESA
+        {Titulos.Institucion[1]}
       </p>
       <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
         <li>
-          Habilidades en programación orientada a objetos y en el uso de etiquetas y
-          hojas de estilos en cascada (HTML y CSS).
+          {Titulos.Descripcion[1]}
         </li>
       </ul>
     </div>
@@ -50,8 +50,8 @@ export default function Estudios() {
         CURSOS
       </h2>
       <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
-        <li>Excel Intermedio – Teachlr. <span className="text-gray-400 text-sm">Dic. 2023</span></li>
-        <li>Curso Profesional de HTML y CSS – Azul School. <span className="text-gray-400 text-sm">Nov. 2023</span></li>
+        <li>{Cursos.Titulo[0]}<span className="text-gray-400 text-sm">{Cursos.Fecha[0]}</span></li>
+        <li>{Cursos.Titulo[1]}<span className="text-gray-400 text-sm">{Cursos.Fecha[1]}</span></li>
       </ul>
     </div>
 
@@ -63,7 +63,7 @@ export default function Estudios() {
         IDIOMAS
       </h2>
       <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
-        <li>Inglés – Lectura: Bueno | Redacción: Intermedio | Comunicación verbal: Intermedio.</li>
+        <li>{Idiomas.ingles[0]}</li>
       </ul>
     </div>
 
@@ -72,12 +72,13 @@ export default function Estudios() {
     {/* Permiso de conducción */}
     <div className="flex flex-col gap-2">
       <h2 className="text-xl md:text-2xl font-semibold text-gray-100">
-        PERMISO DE CONDUCCIÓN
+        PERMISOS Y LICENCIAS
       </h2>
       <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
-        <li>B1 – Automóviles particulares</li>
-        <li>A2 – Motocicletas de cualquier cilindraje</li>
-        <li>C1 – Automóviles de servicio público</li>
+        <li className="text-gray-300 text-lg list-none">{Permisos.Licencia[0]}</li>
+        <li>{Permisos.Tipo[0]}</li>
+        <li>{Permisos.Tipo[1]}</li>
+        <li>{Permisos.Tipo[2]}</li>
       </ul>
     </div>
   </section>
