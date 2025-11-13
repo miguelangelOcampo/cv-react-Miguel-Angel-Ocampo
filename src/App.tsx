@@ -1,5 +1,6 @@
 import Cabecera from './Cabecera'
-import Experiencia from './experiencia'
+import Estudios from './Estudios'
+import Experiencia from './Experiencia'
 import Perfil from './Perfil'
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
       <Cabecera />
       <Perfil />
       <Experiencia />
+      <Estudios />
     </>
   )
 }
