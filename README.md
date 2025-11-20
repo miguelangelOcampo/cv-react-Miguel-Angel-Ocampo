@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# Mi React Vite Miguel Angel Ocampo en React
+# CV Miguel Angel Ocampo Muñoz
+Este proyecto es una aplicación React donde presento mi información personal, habilidades, estudios y experiencia.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vista general del proyecto
+![alt text](./public/img/image.png)
 
-Currently, two official plugins are available:
+# Instrucciones para ejecutar el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clonar este repositorio:
 
-## React Compiler
+En tu terminal usa el comando 
+"git clone https://github.com/miguelangelOcampo/cv-react-Miguel-Angel-Ocampo.git"
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Configurar espacio para tu proyecto 
+Entra a la carpeta he instala las dependencias con "cd nombre-proyecto". Luego instala las dependencias con "npm install", si trabajas con React.
 
-## Expanding the ESLint configuration
+3. Ejecuta tu proyecto
+Usa "npm run dev" y ejecuta tu proyecto en el local host
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Historial de Commits y componentes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Commits del 13 de Noviembre de 2025
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Creación de prop de componente Estudios y modificación pequeña a App  
+  `0765fc9`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Commit de creación, importación, exportación y desestructuración de props (Cabecera, Perfil, Experiencia)  
+  `619a356`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Creación de componente de foto de perfil y reestructuración de la hoja de vida con App.css  
+  `e2c66fb`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Creación de componente para Estudios y importación en App  
+  `1bb69ab`
+
+
+# Commits del 10 de Noviembre de 2025
+
+* Creación de componente para Experiencia laboral y importación en App  
+  `0fb331a`
+
+* Creación de componente para el Perfil, ah importación a App 
+  `1eabefa`
+
+* Creación de componente para la cabecera, he importación en App  
+  `10819c9`
+
+* Commit inicial de carpeta y documentación con las dependencias de React y Vi 
+  `38530e1`
+
+
