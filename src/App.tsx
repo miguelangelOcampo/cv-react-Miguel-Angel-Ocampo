@@ -3,6 +3,7 @@ import Estudios from './Estudios'
 import Experiencia from './Experiencia'
 import Perfil from './Perfil'
 import FotoPerfil from './foto_perfil'
+import Tecnologias from './StackTecnologias'
 import './App.css'
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <div className="right-section">
           <Experiencia />
           <Estudios />
+        <Tecnologias />
         </div>
       </div>
 
