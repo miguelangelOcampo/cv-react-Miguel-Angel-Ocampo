@@ -1,9 +1,9 @@
 # Mi React Vite Miguel Angel Ocampo en React
 # CV Miguel Angel Ocampo Muñoz
-Este proyecto es una aplicación React donde presento mi información personal, habilidades, estudios y experiencia.
+Este proyecto es una aplicación React donde presento mi información personal, habilidades, estudios, tecnologias y experiencia.
 
 Vista general del proyecto
-![alt text](./public/img/image.png)
+![alt text](image.png)
 
 # Instrucciones para ejecutar el proyecto
 
@@ -49,5 +49,12 @@ Usa "npm run dev" y ejecuta tu proyecto en el local host
 
 * Commit inicial de carpeta y documentación con las dependencias de React y Vi 
   `38530e1`
+# Commits del 20 de Noviembre de 2025
 
+* Modificacion de archivo README.md con las descripciones del proyecto
+  `4b1ccb9`
 
+# Commits del 24 de Noviembre de 2025 
+
+* Creacion de componente dinamico renderizacion de lista condicional StackTecnologias
+  `1c06c91`
