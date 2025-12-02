@@ -1,31 +1,48 @@
-import { CabeceraData } from "./data"; //importacion de datos
+import { CabeceraData } from "./data";
 
 function Cabecera() {
-  const { Nombre, Celular, Email, Ubicacion } = CabeceraData; // destructuracion de datos 
+  const { Nombre, Celular, Email, Ubicacion } = CabeceraData;
+
   return (
-    <>
-      <div className="mt-10 flex flex-col items-center text-center gap-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 shadow-lg shadow-black/40 max-w-2xl mx-auto border border-gray-700">
-        <h1 className="text-3xl md:text-4xl font-bold text-white tracking-wide">
-          {Nombre}
-        </h1>
+    <div
+      className="
+        mt-10 flex flex-col items-center text-center gap-4
+        bg-[#0e1117] border border-gray-800 backdrop-blur-xl
+        rounded-3xl p-10 shadow-2xl shadow-black/50
+        max-w-2xl mx-auto text-gray-300
+      "
+    >
+      {/* NOMBRE */}
+      <h1 className="text-xl md:text-3xl font-bold text-cyan-400 tracking-wide drop-shadow-lg">
 
-        <h2 className="text-xl text-gray-300 tracking-[3px]">
-          {Celular}
-        </h2>
+        {Nombre}
+      </h1>
 
-        <a
-          href="mailto:miguelangelocampo713@gmail.com"
-          className="text-orange-400 hover:text-orange-300 transition-colors underline text-lg"
-        >
-          {Email}
-        </a>
+      {/* CELULAR */}
+      <h2 className="text-xl text-gray-400 font-medium tracking-widest">
+        {Celular}
+      </h2>
 
-        <h3 className="text-lg text-gray-400">{Ubicacion}</h3>
-      </div>
+      {/* EMAIL */}
+      <a
+        href={`mailto:${Email}`}
+        className="
+          text-cyan-300 hover:text-cyan-200 
+          transition-all duration-200 text-lg font-medium underline-offset-4 hover:underline
+        "
+      >
+        {Email}
+      </a>
 
+      {/* UBICACIÓN */}
+      <h3 className="text-lg text-gray-400 tracking-wide">
+        {Ubicacion}
+      </h3>
 
-    </>
-  )
+      {/* Divisor */}
+      <div className="w-full h-px bg-gray-700 mt-4"></div>
+    </div>
+  );
 }
 
-export default Cabecera
+export default Cabecera;

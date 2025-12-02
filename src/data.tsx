@@ -1,4 +1,3 @@
-import Estudios from "./Estudios"
 
 export const CabeceraData = {
     Nombre: "MIGUEL ANGEL OCAMPO MUÑOZ",
@@ -78,6 +77,16 @@ export const EstudiosData = {
             "C1 – Automóviles de servicio público"
         ]
     }
-
     
+   
 }
+export const habilidadesData = [
+  "Trabajo en equipo",
+  "Responsabilidad",
+  "Comunicación efectiva",
+  "Aprendizaje rápido",
+  "Capacidad de adaptación",
+  "Manejo básico de Git y GitHub",
+  "Organización de tareas"
+];
+
