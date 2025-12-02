@@ -4,6 +4,10 @@ import Experiencia from './Experiencia'
 import Perfil from './Perfil'
 import FotoPerfil from './foto_perfil'
 import Tecnologias from './StackTecnologias'
+import { habilidadesData } from "./data";
+import ToggleHabilidades from "./ToggleHabilidades";
+
+
 import './App.css'
 function App() {
 
@@ -15,12 +19,16 @@ function App() {
           <FotoPerfil />
           <Cabecera />
           <Perfil />
+        <ToggleHabilidades habilidades={habilidadesData} />
+
         </div>
 
         <div className="right-section">
           <Experiencia />
           <Estudios />
         <Tecnologias />
+
+        
         </div>
       </div>
 
