@@ -1,77 +1,50 @@
-export default function Tecnologias() {
-  const tecnologias = {
-    Lenguajes: ["JavaScript", "Python", "micropython", "Node.js", "HTML5", "CSS"],
-    Frameworks: ["React", "Express", "Tailwind CSS"],
-    Herramientas: ["Git & GitHub", "Power Apps", "Power Automate", "MySQL", "Mongo DB"],
+import { useState } from "react"; //Componente para que permite manejar los eventos de formulario
+import FormularioTecnologia from "./FormularioTecnologia"; //importa el componente de logica para el envio del formulario
+
+export default function StackTecnologias() {
+  const [tecnologias, setTecnologias] = useState<string[]>([]);//Estado local para almacenar la lista de tecnologías agregadas
+  const [mostrarFormulario, setMostrarFormulario] = useState<boolean>(false); //Estado para controlar la visibilidad del formulario
+
+  const agregarTecnologia = (nuevaTec: string) => { //Función que agrega una nueva tecnología a la lista
+    setTecnologias([...tecnologias, nuevaTec]); //Agrega la nueva tecnología al array de tecnologías
+    setMostrarFormulario(false);            //Oculta el formulario después de agregar la tecnología 
   };
 
-  // Si NO hay tecnologías
-  if (
-    tecnologias.Lenguajes.length === 0 &&
-    tecnologias.Frameworks.length === 0 &&
-    tecnologias.Herramientas.length === 0
-  ) {
-    return (
-      <div className="mt-10 flex flex-col items-center gap-10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 shadow-lg shadow-black/40 max-w-3xl mx-auto border border-gray-700">
-        <section className="w-full flex flex-col items-start gap-4">
-          <h1 className="text-2xl md:text-3xl font-semibold text-blue-400">
-            TECNOLOGÍAS
-          </h1>
-          <p className="text-gray-300 text-lg">No hay tecnologías disponibles.</p>
-        </section>
-      </div>
-    );
-  }
-
-  // Si SÍ hay tecnologías
   return (
-    <div className="mt-10 flex flex-col items-center gap-10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 shadow-lg shadow-black/40 max-w-3xl mx-auto border border-gray-700">
-      <section className="w-full flex flex-col items-start gap-8">
-        <h1 className="text-2xl md:text-3xl font-semibold text-blue-400">
-          TECNOLOGÍAS
-        </h1>
+    <div
+      className="
+        mt-10 flex flex-col items-center gap-10 
+        bg-gray-900/60 backdrop-blur-xl border border-gray-800 
+        rounded-3xl p-10 shadow-2xl max-w-3xl mx-auto
+      "
+    >
+      <h1 className="text-3xl font-bold text-cyan-400 tracking-wide drop-shadow-lg">
+        TECNOLOGÍAS
+      </h1>
 
-        {/* Lenguajes */}
-        <div className="flex flex-col gap-2">
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-100">
-            Lenguajes de Programación
-          </h2>
-          <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
-            {tecnologias.Lenguajes.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
+      <button
+        onClick={() => setMostrarFormulario(!mostrarFormulario)}
+        className="
+          bg-blue-500 hover:bg-blue-600 
+          text-white py-2 px-4 rounded-lg font-semibold shadow-md
+        "
+      >
+        {mostrarFormulario ? "Cerrar Formulario" : "Agregar Tecnología"}
+      </button>
 
-        <div className="w-full h-[1px] bg-gray-700 mt-4"></div>
+      {mostrarFormulario && (
+        <FormularioTecnologia onAgregar={agregarTecnologia} />
+      )}
 
-        {/* Frameworks */}
-        <div className="flex flex-col gap-2">
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-100">
-            Frameworks y Librerías
-          </h2>
-          <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
-            {tecnologias.Frameworks.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="w-full h-[1px] bg-gray-700 mt-4"></div>
-
-        {/* Herramientas */}
-        <div className="flex flex-col gap-2">
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-100">
-            Herramientas y Tecnologías
-          </h2>
-          <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed mt-2">
-            {tecnologias.Herramientas.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {tecnologias.length > 0 ? (
+        <ul className="list-disc ml-5 space-y-2 text-gray-300 text-lg leading-relaxed">
+          {tecnologias.map((tec, index) => (
+            <li key={index}>{tec}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-gray-500 text-lg">Aún no agregas tecnologías.</p>
+      )}
     </div>
   );
 }
-
