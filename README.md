@@ -2,7 +2,6 @@
 # CV Miguel Angel Ocampo Muñoz
 Este proyecto es una aplicación React donde presento mi información personal, habilidades, estudios, tecnologias y experiencia.
 
-Vista general del proyecto
 ![alt text](image.png)
 
 # Instrucciones para ejecutar el proyecto
@@ -57,4 +56,23 @@ Usa "npm run dev" y ejecuta tu proyecto en el local host
 # Commits del 24 de Noviembre de 2025 
 
 * Creacion de componente dinamico renderizacion de lista condicional StackTecnologias
-  `1c06c91`
+`1c06c91`
+
+# Commits del 2 de diciembre del 2025
+* Renderizado dinámico de tecnologías desde App, modificaciones extras
+`db4b8fc`
+
+* Función agregarTecnologia en StackTecnologias.jsx y paso como prop
+`4778fd7`
+
+* Creación de componente FormularioTecnologia con inputs
+`dc0f904`
+
+* Implementación de useState para mostrar/ocultar habilidades
+`04b7902`
+
+* Creación de componente ToggleHabilidades con renderizado
+`f6c687a`
+
+* Organización inicial del proyecto para integración de eventos
+`412643e`
